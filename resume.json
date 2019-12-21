@@ -1,0 +1,315 @@
+{
+  "basics": {
+    "name": "Kip Ricker",
+    "label": "Senior Software Engineer",
+    "email": "kip.ricker@gmail.com",
+    "phone": "818-804-9703",
+    "summary": "Passionate and driven engineer with an insatiable need to learn and grow. Motivated by challenging problems. Skilled in full stack feature work. Strong inter-team communication skills. Passion for UX and security.",
+    "location": {
+      "city": "Portsmouth",
+      "countryCode": "US",
+      "region": "New Hampshire"
+    },
+    "profiles": [
+      {
+        "network": "github",
+        "username": "kipricker",
+        "url": "https://github.com/kipricker"
+      },
+      {
+        "network": "linkedin",
+        "username": "kipricker",
+        "url": "https://www.linkedin.com/in/kipricker"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "JS/ES6+",
+        "C++",
+        "Objective C",
+        "C#"
+      ]
+    },
+    {
+      "name": "Technologies",
+      "keywords": [
+        "Android",
+        "AWS",
+        "Cross-platform",
+        "Cocos2d-x",
+        "Express",
+        "React",
+        "React Native",
+        "iOS",
+        "Mobx",
+        "Node",
+        "Perforce",
+        "Protocol Buffers",
+        "Unity",
+        "Unreal Engine"
+      ]
+    }
+  ],
+
+  "work": [
+    {
+      "company": "Bit Fry Game Studios",
+      "position": "Director of Engineering", 
+      "startDate": "2019-04-08",
+      "keywords": [
+        "iOS",
+        "Unreal Engine",
+        "JS/ES6+",
+        "C++",
+        "Objective C"
+      ],
+      "summary": "",
+      "highlights": [
+        
+      ]
+    }, 
+    {
+      "company": "WB Games San Francisco (Plexchat acquisition)",
+      "position": "Staff Software Engineer", 
+      "startDate": "2018-06-01",
+      "endDate": "2019-04-05",
+      "keywords": [
+        "iOS",
+        "Android",
+        "Unity",
+        "JS/ES6+",
+        "C#",
+        "C++",
+        "Objective C"
+      ],
+      "summary": "Lead of Plexchat engineering team building social tools and integrating Plexchat into WB Games' existing products",
+      "highlights": [
+        "Designed a generalized Unity Plugin that allows for easy and robust integration into many different game formats",
+        "Built a Unity canvas object that would map its location and size to native iOS and Android elements, allowing our React built Plexchat to run in a Webview on top of Unity wherever the developer wanted it",
+        "Designed the changes needed for our platform to become CVAA compliant",
+        "Worked with 3 external studios to integrate Plexchat into their games"
+      ]
+    }, 
+    {
+      "company": "Plexchat",
+      "position": "Tech Lead, Senior Software Engineer", 
+      "startDate": "2015-10-01",
+      "endDate": "2018-06-01",
+      "keywords": [
+        "iOS",
+        "Android",
+        "Web",
+        "Security",
+        "SaaS",
+        "JS/ES6+",
+        "Node/Express",
+        "Protocol Buffers",
+        "C++",
+        "Distributed systems"
+      ],
+      "summary": "First employee and integral member responsible for building and releasing Plexchat",
+      "highlights": [
+        "Lead mobile client development using React Native with a team of 5",
+        "Worked on distributed stateful server written in C++",
+        "Built server/client communication architecture with Protocol Buffers and a custom Protocol Buffer diffing engine",
+        "Created ExpressJS middleware patterns for SaaS portal authentication and authorization",
+        "Worked closely with Product and UX designers throughout development",
+        "Mentored junior engineers"
+      ]
+    }, 
+    {
+      "company": "Mappable",
+      "position": "Mobile Engineer", 
+      "startDate": "2015-01-01",
+      "endDate": "2015-10-01",
+      "keywords": [
+        "iOS",
+        "Interface Builder",
+        "Auto Layout"
+      ],
+      "summary": "Worked on the UI/UX of a music discovery app",
+      "highlights": [
+        "Built adaptive Auto Layout UI with UIKit elements over an OpenGL view",
+        "Improved REST API communication with NSURLSession and AFNetworking",
+        "Improved threading using iOS’s Quality of Service classes"
+      ]
+    }, 
+    {
+      "company": "Big Fish Games",
+      "position": "Senior Software Engineer", 
+      "startDate": "2013-02-01",
+      "endDate": "2015-01-01",
+      "summary": "Lead the development of new engine technology that changed the face of Big Fish Games' biggest titles",
+      "keywords": [
+        "iOS",
+        "Android",
+        "Web",
+        "Cocos2d-x"
+      ],
+      "highlights": [
+        "Designed a cross platform engine built on Cocos2d-x with the goal of having a single Javascript codebase that would to be updated over the air on all platforms",
+        "This engine is now used to drive the company’s largest games, including Casino, Lifeline, and Fairway Solitaire",
+        "Worked with the tools team to empower designers and artists with more data driven functionality",
+        "Created an asset bundling system that would only include used assets, update assets that changed, and remove assets that were no longer used",
+        "The game engine itself was delivered using these assets bundles",
+        "Mentored junior engineers"
+      ]
+    }, 
+    {
+      "company": "Jet Set Games",
+      "position": "Software Engineer", 
+      "startDate": "2011-04-01",
+      "endDate": "2013-02-01",
+      "keywords": [
+        "iOS",
+        "Unity",
+        "Steam"
+      ],
+      "summary": "Built and maintained live mobile and PC games using Unity",
+      "highlights": [
+        "Built Unity editor tools to build and run on iOS, debug, and deploy to Testflight without Xcode",
+        "Created a Unity asset pipeline for versioning, and hosting asset bundles",
+        "Designed a Maya node animation exporter and playback for customizable characters in Cocos2d",
+        "Designed a layered construction and destruction system for 2D buildings making it possible to created each state of a building with only a few images, reducing memory use and the time it took for artists to create each building."
+      ]
+    }, 
+    {
+      "company": "Black Ops Entertainment",
+      "position": "Software Engineer", 
+      "startDate": "2010-06-01",
+      "endDate": "2011-04-01",
+      "keywords": [
+        "iOS",
+        "OpenGL"
+      ],
+      "summary": "Sole iOS developer on a stock market analysis app built with OpenGL ES 2.0"
+    }, 
+    {
+      "company": "Inzania",
+      "position": "Software Engineer", 
+      "startDate": "2009-12-01",
+      "endDate": "2010-06-01",
+      "keywords": [
+        "iOS",
+        "Cocos2d"
+      ],
+      "summary": "Built apps and ported Flash games to iOS using Obj-C and Cocos2d"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Ram Fam - 48 Hour Game Jam",
+      "url": "https://globalgamejam.org/2019/games/ramfam",
+      "keywords": [
+        "Unreal Engine"
+      ],
+      "summary": "Single player adventure",
+      "highlights": [
+        "Used event as a chance to learn Unreal Engine",
+        "Built inventory system",
+        "Optimized level collision using Unreal's LOD mesh generation"
+      ]
+    },
+    {
+      "name": "Jambotz - 48 Hour Game Jam",
+      "url": "https://github.com/kipricker/jambotz",
+      "keywords": [
+        "Node",
+        "Unity"
+      ],
+      "summary": "Turn-based online multiplayer",
+      "highlights": [
+        "Server authoritative",
+        "RESTful API"
+      ]
+    },
+    {
+      "name": "Loyal - 48 Hour Game Jam",
+      "url": "https://youtu.be/Fs63PKq0-2w",
+      "keywords": [
+        "Cocos2d-x"
+      ],
+      "summary": "Created in Cocos2d-x as a proof of concept for my SAKit project at Big Fish Games",
+      "highlights": [
+        "Level composition, gameplay, actors, and animations were all data driven"
+      ]
+    },
+    {
+      "name": "iOS External PC Racing Gauges",
+      "url": "http://youtu.be/oTaPsO8LFkw",
+      "keywords": [
+        "iOS"
+      ],
+      "summary": "An app that would display in car data from the Dirt series",
+      "highlights": [
+        "Server broadcasts data from the Open Motion API via a TCP broadcast socket",
+        "Experimental server pulls car data straight from memory, giving the server access to more data",
+        "Client displays car data on customizable and dynamically generated gauges"
+      ]
+    },
+    {
+      "name": "48 Hour Unity Challenge",
+      "url": "https://www.dropbox.com/s/1yaee3au79e5awi",
+      "keywords": [
+        "Unity"
+      ],
+      "summary": "Completed as part of a job interview, I wanted to focus on the following:",
+      "highlights": [
+        "Reusable subclasses (would now favor composition over inheritance)",
+        "Exposing variables to the editor",
+        "Building  prefabs"
+      ]
+    },
+    {
+      "name": "iTunes Album Art Color Theory Experiment",
+      "url": "https://github.com/kipricker/ImageThemeColorPicker",
+      "keywords": [
+        "iOS",
+        "Design",
+        "Color Theory"
+      ],
+      "summary": "Wanted to see how I could create a color theme from album art",
+      "highlights": [
+        "Created a quantized color palette",
+        "Identify meaningful colors from palette using CIE distances and W3 contrast rules"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Shawnee State University",
+      "area": "Game and Simulation Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2005-01-01",
+      "endDate": "2009-01-01"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Games",
+      "keywords": [
+        "Sim Tower",
+        "Jazz Jackrabbit",
+        "Streets of Sim City",
+        "Loom",
+        "Another World",
+        "Zelda",
+        "Borderlands"
+      ]
+    },
+    {
+      "name": "Electronics",
+      "keywords": [
+        "Custom keyboards",
+        "3D printing",
+        "Prototyping",
+        "Reverse engineering"
+      ]
+    }
+  ]
+}
+
+

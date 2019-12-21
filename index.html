@@ -1,0 +1,1352 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Kip Ricker</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    color: #40484f;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.46153846;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+
+p {
+    display: block;
+    margin-bottom: 1.3em;
+}
+
+a {
+    color: #0095ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0c65a5;
+    text-decoration: underline;
+}
+
+ul {
+    margin-top: 1rem;
+}
+
+li {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 1.3em;
+}
+
+.highlights>li>p {
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.67rem;
+}
+
+h3 {
+    font-size: 1.27rem;
+}
+
+em {
+    color: #757575;
+}
+
+blockquote {
+    margin-bottom: 1em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* main container */
+
+#resume {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* every section wrapper */
+
+.section {
+    margin-bottom: 1rem;
+}
+
+section .location {
+    margin-right: .5em;
+    color: #606d76;
+    font-weight: 700;
+}
+
+#contact {
+    margin-top: .5rem;
+}
+
+#profiles .item {
+    padding: 0;
+}
+
+#header>#profiles,
+#header>#contact,
+#skills,
+#languages,
+#interests {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+#header>div {
+    line-height: 1.5;
+}
+
+#header>div>div {
+    margin-right: 1.2em;
+}
+
+#header h1.name {
+    font-size: 2.8rem;
+    font-weight: 100;
+    line-height: 100%;
+}
+
+#header h2.label {
+    color: #202931;
+    font-size: 1.47rem;
+    font-weight: 300;
+}
+
+#header .picture {
+    width: 11em;
+    float: right;
+    border-radius: 4px;
+}
+
+.main-summary {
+    background: #f1f8ff;
+    padding: 1.2em 1em;
+    margin-top: 1rem;
+}
+
+.main-summary p {
+    margin: .15em 0 0;
+}
+
+h2.section-title {
+    display: inline-block;
+    background: #fff;
+    padding: 0 1em 0.3em 0;
+    color: #ff6d1f;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    font-size: .9rem;
+}
+
+.section>header {
+    position: relative;
+}
+
+.fa {
+    margin-right: 0.25em;
+}
+
+.section>header::after {
+    position: absolute;
+    left: 0;
+    top: .7em;
+    height: 1px;
+    background: #ccc;
+    content: "";
+    width: 100%;
+    z-index: -100;
+    display: block;
+}
+
+.section.main-summary>section {
+    margin: 0;
+}
+
+.section>section>header {
+    font-size: 1.38rem;
+    position: relative;
+    margin-top: .7em;
+}
+
+.section>section>header:first-of-type {
+    margin: 0;
+}
+
+.section>section>header .space-left {
+    position: absolute;
+    left: -1.56rem;
+    top: 5px;
+    color: #aaa;
+    line-height: 1;
+    opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+    display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+    font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+    content: "at "
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+    color: #606d76;
+    font-weight: 400;
+}
+
+.section header .date {
+    font-size: 1rem;
+    display: inline-table;
+    padding: .1em 0;
+    font-weight: 600;
+}
+
+ul.keywords,
+ul.courses {
+    margin-top: .5em;
+}
+
+ul.keywords li,
+ul.courses li {
+    display: inline-block;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    font-size: .9rem;
+    line-height: 1;
+    text-transform: lowercase;
+    color: #3e6d8e;
+    background-color: #dfeaf1;
+    border: 0 solid #dfeaf1;
+    white-space: nowrap;
+}
+
+ul.keywords li:hover,
+ul.courses li:hover {
+    background: #dfeaf0;
+}
+
+.item {
+    padding: .5em 0;
+}
+
+.gpa {
+    padding-bottom: .5em;
+}
+
+.fa.social {
+    font-size: 1.1em;
+}
+
+
+/* Social Media Brand Colors */
+
+.google-plus {
+    color: #dd4b39;
+}
+
+.tumblr {
+    color: #32506d;
+}
+
+.foursquare {
+    color: #0072b1;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.linkedin {
+    color: #007bb6;
+}
+
+.pinterest {
+    color: #cb2027;
+}
+
+.dribbble {
+    color: #ea4c89;
+}
+
+.instagram {
+    color: #517fa4;
+}
+
+.twitter {
+    color: #00aced;
+}
+
+.soundcloud {
+    color: #ff3a00;
+}
+
+.wordpress {
+    color: #21759b;
+}
+
+.youtube {
+    color: #bb0000;
+}
+
+.github {
+    color: #171515;
+}
+
+.stack-overflow {
+    color: #828386;
+    position: relative;
+}
+
+.flickr {
+    color: #ff0084;
+}
+
+.reddit {
+    color: #ff4500;
+}
+
+.hacker-news {
+    color: #ff6600;
+}
+
+.stack-overflow::after {
+    position: absolute;
+    left: 0;
+    content: '\f16c';
+    color: #f68a1f;
+    overflow: hidden;
+    height: 100%;
+}
+
+.telegram {
+    color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+    width: 15em;
+    padding: 0 .5em .5em 0;
+    border-bottom: none;
+}
+
+#skills .item {
+    width: 16em;
+}
+
+#skills .item .keywords {
+    width: 15em;
+}
+
+
+/* Skill chart */
+
+.level {
+    margin-bottom: .5em;
+}
+
+.level .bar {
+    border: 1px solid #ddd;
+    display: block;
+    width: 10em;
+    height: 5px;
+    position: relative;
+}
+
+.level .bar::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    background: black;
+    height: 5px;
+}
+
+.level.beginner .bar::after {
+    background: #EB5F51;
+    width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+    background: #ffdf1f;
+    width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+    background: #5CB85C;
+    width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+    background: #59C596;
+    width: 10em;
+}
+
+#references .item {
+    padding-left: .5em;
+    border-left: 5px solid #ff6d1f;
+}
+
+.toggle-item {
+  visibility: hidden;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.display {
+    display: block;
+    opacity: 1 !important;
+}
+
+.margin1 {
+    margin-bottom: .5rem;
+}
+
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+    #resume {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+    li {
+        margin-left: 1.5em;
+    }
+    #resume {
+        width: 820px;
+        margin: 2rem auto;      
+    }
+    .section>section>header .space-left {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .section>section {
+        margin-left: 1.67rem;
+    }
+    .toggle-item {
+        transform: translate(-9999px);
+    }
+    .toggle-item+label {
+        display: block;
+        margin-top: -16px;
+    }
+    .toggle-item:checked+label:after {
+        content: '\f0d7';
+    }
+    .toggle-item+label:after {
+        float: left;
+        cursor: pointer;
+        margin-left: -20px;
+        color: #aaa;
+        font-size: 16px;
+        content: '\f0da';
+        font-family: Fontawesome;
+    }
+    .toggle-item~.item {
+        height: 0;
+        opacity: 0;
+    }
+    .toggle-item:checked~.item {
+        height: auto;
+        opacity: 1;
+        transition: all .5s linear;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "| ";
+    }
+    .header-left {
+        float: left;
+        width: 70%;
+        word-break: normal;
+    }
+    .section header .date {
+        float: right;
+        padding: .2em;
+    }
+    .display {
+        display: none;
+    }
+    .display:not(.none) {
+        display: block;
+    }
+}
+
+@media print {
+    #resume {
+        margin: 0;
+        padding: 0;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 1.3;
+        /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
+    }
+    @page {
+        margin: 1cm 1.4cm;
+    }
+    .item-count {
+        display: none;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "at ";
+    }
+    .main-summary {
+        padding: 2rem 0;
+    }
+    .section {
+        margin: .8rem 0;
+        padding: 0;
+    }
+    .section header {
+        padding-bottom: .15rem;
+    }
+    .section .location {
+        padding-bottom: .15rem;
+    }
+    .stack-overflow::after {
+        content: "";
+    }
+    .fa.social {
+        color: #828386;
+    }
+    ul {
+        margin-top: .4em;
+    }
+    ul,
+    li {
+        padding: 0;
+    }
+    ul.keywords li,
+    ul.courses li {
+        margin: 0;
+        padding: 0;
+        font-size: .8rem;
+        text-transform: lowercase;
+    }
+    ul.keywords li::after,
+    ul.courses li::after {
+        padding: 0 0 0 .1rem;
+        content: " |";
+    }
+    ul.keywords::before,
+    ul.courses::before {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    ul.keywords::before {
+        content: "Skills acquired: ";
+    }
+    #skills .keywords::before {
+        content: '';
+    }
+    .section p {
+        margin: 0;
+        padding: 0;
+    }
+    ul.courses::before {
+        content: "Major courses: ";
+    }
+    ul.keywords li:last-of-type::after,
+    ul.courses li:last-of-type::after {
+        content: "";
+    }
+    .level em {
+        font-style: normal;
+        padding: .1em 0;
+    }
+    .level .bar {
+        display: none;
+    }
+    #profiles .item {
+        padding: 0;
+    }
+    .item.display {
+        display: block;
+        opacity: 1 !important;
+    }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Kip Ricker</h1>
+    			<h2 class="label">Senior Software Engineer</h2>
+    		</div>
+    		
+    		<span class="location">
+    			<span class="city">Portsmouth,</span> 
+    			<span class="region">New Hampshire</span> 
+    			<span class="countryCode">US</span> 
+    		</span>
+    		
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="fa fa-envelope-o"></span>
+    				<a href="mailto:kip.ricker@gmail.com">kip.ricker@gmail.com</a>
+    			</div>
+    			<div class="phone">
+    				<span class="fa fa-mobile"></span>
+    				<a href="tel:818-804-9703">818-804-9703</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fa fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/kipricker">kipricker</a>
+    					</span> 
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fa fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/kipricker">kipricker</a>
+    					</span> 
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section main-summary">
+    		<section>
+    			<div><p>Passionate and driven engineer with an insatiable need to learn and grow. Motivated by challenging problems. Skilled in full stack feature work. Strong inter-team communication skills. Passion for UX and security.</p></div>
+    		</section>
+    	</section>
+    
+    <section class="section margin1">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Languages
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>JS/ES6+</li>
+    				<li>C++</li>
+    				<li>Objective C</li>
+    				<li>C#</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Technologies
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>Android</li>
+    				<li>AWS</li>
+    				<li>Cross-platform</li>
+    				<li>Cocos2d-x</li>
+    				<li>Express</li>
+    				<li>React</li>
+    				<li>React Native</li>
+    				<li>iOS</li>
+    				<li>Mobx</li>
+    				<li>Node</li>
+    				<li>Perforce</li>
+    				<li>Protocol Buffers</li>
+    				<li>Unity</li>
+    				<li>Unreal Engine</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(8)</span></h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+    
+    			<header>
+    				<div class="position">Director of Engineering</div>
+    				<div class="company">Bit Fry Game Studios</div>
+    				<div class="date">
+    				  <span class="startDate">April 2019</span> 
+    					<span class="endDate">- Current</span>
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>Unreal Engine</li>
+          	<li>JS/ES6+</li>
+          	<li>C++</li>
+          	<li>Objective C</li>
+        	</ul>
+        	<div class="item" id="work-item">
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-1" type="checkbox" class="toggle-item" />
+            <label for="work-item-1"></label>
+    
+    			<header>
+    				<div class="position">Staff Software Engineer</div>
+    				<div class="company">WB Games San Francisco (Plexchat acquisition)</div>
+    				<div class="date">
+    				  <span class="startDate">June 2018</span> 
+    					<span class="endDate">- April 2019</span> 
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>Android</li>
+          	<li>Unity</li>
+          	<li>JS/ES6+</li>
+          	<li>C#</li>
+          	<li>C++</li>
+          	<li>Objective C</li>
+        	</ul>
+        	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Lead of Plexchat engineering team building social tools and integrating Plexchat into WB Games' existing products</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Designed a generalized Unity Plugin that allows for easy and robust integration into many different game formats</p></li>
+                <li><p>Built a Unity canvas object that would map its location and size to native iOS and Android elements, allowing our React built Plexchat to run in a Webview on top of Unity wherever the developer wanted it</p></li>
+                <li><p>Designed the changes needed for our platform to become CVAA compliant</p></li>
+                <li><p>Worked with 3 external studios to integrate Plexchat into their games</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-2" type="checkbox" class="toggle-item" />
+            <label for="work-item-2"></label>
+    
+    			<header>
+    				<div class="position">Tech Lead, Senior Software Engineer</div>
+    				<div class="company">Plexchat</div>
+    				<div class="date">
+    				  <span class="startDate">October 2015</span> 
+    					<span class="endDate">- June 2018</span> 
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>Android</li>
+          	<li>Web</li>
+          	<li>Security</li>
+          	<li>SaaS</li>
+          	<li>JS/ES6+</li>
+          	<li>Node/Express</li>
+          	<li>Protocol Buffers</li>
+          	<li>C++</li>
+          	<li>Distributed systems</li>
+        	</ul>
+        	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>First employee and integral member responsible for building and releasing Plexchat</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Lead mobile client development using React Native with a team of 5</p></li>
+                <li><p>Worked on distributed stateful server written in C++</p></li>
+                <li><p>Built server/client communication architecture with Protocol Buffers and a custom Protocol Buffer diffing engine</p></li>
+                <li><p>Created ExpressJS middleware patterns for SaaS portal authentication and authorization</p></li>
+                <li><p>Worked closely with Product and UX designers throughout development</p></li>
+                <li><p>Mentored junior engineers</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-3" type="checkbox" class="toggle-item" />
+            <label for="work-item-3"></label>
+    
+    			<header>
+    				<div class="position">Mobile Engineer</div>
+    				<div class="company">Mappable</div>
+    				<div class="date">
+    				  <span class="startDate">January 2015</span> 
+    					<span class="endDate">- October 2015</span> 
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>Interface Builder</li>
+          	<li>Auto Layout</li>
+        	</ul>
+        	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Worked on the UI/UX of a music discovery app</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Built adaptive Auto Layout UI with UIKit elements over an OpenGL view</p></li>
+                <li><p>Improved REST API communication with NSURLSession and AFNetworking</p></li>
+                <li><p>Improved threading using iOS’s Quality of Service classes</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-4" type="checkbox" class="toggle-item" />
+            <label for="work-item-4"></label>
+    
+    			<header>
+    				<div class="position">Senior Software Engineer</div>
+    				<div class="company">Big Fish Games</div>
+    				<div class="date">
+    				  <span class="startDate">February 2013</span> 
+    					<span class="endDate">- January 2015</span> 
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>Android</li>
+          	<li>Web</li>
+          	<li>Cocos2d-x</li>
+        	</ul>
+        	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Lead the development of new engine technology that changed the face of Big Fish Games' biggest titles</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Designed a cross platform engine built on Cocos2d-x with the goal of having a single Javascript codebase that would to be updated over the air on all platforms</p></li>
+                <li><p>This engine is now used to drive the company’s largest games, including Casino, Lifeline, and Fairway Solitaire</p></li>
+                <li><p>Worked with the tools team to empower designers and artists with more data driven functionality</p></li>
+                <li><p>Created an asset bundling system that would only include used assets, update assets that changed, and remove assets that were no longer used</p></li>
+                <li><p>The game engine itself was delivered using these assets bundles</p></li>
+                <li><p>Mentored junior engineers</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-5" type="checkbox" class="toggle-item" />
+            <label for="work-item-5"></label>
+    
+    			<header>
+    				<div class="position">Software Engineer</div>
+    				<div class="company">Jet Set Games</div>
+    				<div class="date">
+    				  <span class="startDate">April 2011</span> 
+    					<span class="endDate">- February 2013</span> 
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>Unity</li>
+          	<li>Steam</li>
+        	</ul>
+        	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Built and maintained live mobile and PC games using Unity</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Built Unity editor tools to build and run on iOS, debug, and deploy to Testflight without Xcode</p></li>
+                <li><p>Created a Unity asset pipeline for versioning, and hosting asset bundles</p></li>
+                <li><p>Designed a Maya node animation exporter and playback for customizable characters in Cocos2d</p></li>
+                <li><p>Designed a layered construction and destruction system for 2D buildings making it possible to created each state of a building with only a few images, reducing memory use and the time it took for artists to create each building.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-6" type="checkbox" class="toggle-item" />
+            <label for="work-item-6"></label>
+    
+    			<header>
+    				<div class="position">Software Engineer</div>
+    				<div class="company">Black Ops Entertainment</div>
+    				<div class="date">
+    				  <span class="startDate">June 2010</span> 
+    					<span class="endDate">- April 2011</span> 
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>OpenGL</li>
+        	</ul>
+        	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Sole iOS developer on a stock market analysis app built with OpenGL ES 2.0</p></p>
+            </div>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-7" type="checkbox" class="toggle-item" />
+            <label for="work-item-7"></label>
+    
+    			<header>
+    				<div class="position">Software Engineer</div>
+    				<div class="company">Inzania</div>
+    				<div class="date">
+    				  <span class="startDate">December 2009</span> 
+    					<span class="endDate">- June 2010</span> 
+    				</div>
+    			</header>
+    			
+     
+        	<ul class="keywords">
+          	<li>iOS</li>
+          	<li>Cocos2d</li>
+        	</ul>
+        	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Built apps and ported Flash games to iOS using Obj-C and Cocos2d</p></p>
+            </div>
+        	</div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Projects <span class="item-count">(6)</span></h2>
+      </header>
+      <section id="projects">
+        <section class="project-item">
+            <input id="project-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="project-item-0"></label>
+    
+          <header>
+            <div class="position">Ram Fam - 48 Hour Game Jam</div>
+          </header>
+          <span class="website">
+            <a target="_blank" href="https://globalgamejam.org/2019/games/ramfam">https://globalgamejam.org/2019/games/ramfam</a>
+          </span>
+          <ul class="keywords">
+              <li>Unreal Engine</li>
+          </ul>
+          <div class="item">
+            <div class="summary">
+              <p><p>Single player adventure</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Used event as a chance to learn Unreal Engine</p></li>
+                <li><p>Built inventory system</p></li>
+                <li><p>Optimized level collision using Unreal's LOD mesh generation</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="project-item">
+            <input id="project-item-1" type="checkbox" class="toggle-item" />
+            <label for="project-item-1"></label>
+    
+          <header>
+            <div class="position">Jambotz - 48 Hour Game Jam</div>
+          </header>
+          <span class="website">
+            <a target="_blank" href="https://github.com/kipricker/jambotz">https://github.com/kipricker/jambotz</a>
+          </span>
+          <ul class="keywords">
+              <li>Node</li>
+              <li>Unity</li>
+          </ul>
+          <div class="item">
+            <div class="summary">
+              <p><p>Turn-based online multiplayer</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Server authoritative</p></li>
+                <li><p>RESTful API</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="project-item">
+            <input id="project-item-2" type="checkbox" class="toggle-item" />
+            <label for="project-item-2"></label>
+    
+          <header>
+            <div class="position">Loyal - 48 Hour Game Jam</div>
+          </header>
+          <span class="website">
+            <a target="_blank" href="https://youtu.be/Fs63PKq0-2w">https://youtu.be/Fs63PKq0-2w</a>
+          </span>
+          <ul class="keywords">
+              <li>Cocos2d-x</li>
+          </ul>
+          <div class="item">
+            <div class="summary">
+              <p><p>Created in Cocos2d-x as a proof of concept for my SAKit project at Big Fish Games</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Level composition, gameplay, actors, and animations were all data driven</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="project-item">
+            <input id="project-item-3" type="checkbox" class="toggle-item" />
+            <label for="project-item-3"></label>
+    
+          <header>
+            <div class="position">iOS External PC Racing Gauges</div>
+          </header>
+          <span class="website">
+            <a target="_blank" href="http://youtu.be/oTaPsO8LFkw">http://youtu.be/oTaPsO8LFkw</a>
+          </span>
+          <ul class="keywords">
+              <li>iOS</li>
+          </ul>
+          <div class="item">
+            <div class="summary">
+              <p><p>An app that would display in car data from the Dirt series</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Server broadcasts data from the Open Motion API via a TCP broadcast socket</p></li>
+                <li><p>Experimental server pulls car data straight from memory, giving the server access to more data</p></li>
+                <li><p>Client displays car data on customizable and dynamically generated gauges</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="project-item">
+            <input id="project-item-4" type="checkbox" class="toggle-item" />
+            <label for="project-item-4"></label>
+    
+          <header>
+            <div class="position">48 Hour Unity Challenge</div>
+          </header>
+          <span class="website">
+            <a target="_blank" href="https://www.dropbox.com/s/1yaee3au79e5awi">https://www.dropbox.com/s/1yaee3au79e5awi</a>
+          </span>
+          <ul class="keywords">
+              <li>Unity</li>
+          </ul>
+          <div class="item">
+            <div class="summary">
+              <p><p>Completed as part of a job interview, I wanted to focus on the following:</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Reusable subclasses (would now favor composition over inheritance)</p></li>
+                <li><p>Exposing variables to the editor</p></li>
+                <li><p>Building  prefabs</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="project-item">
+            <input id="project-item-5" type="checkbox" class="toggle-item" />
+            <label for="project-item-5"></label>
+    
+          <header>
+            <div class="position">iTunes Album Art Color Theory Experiment</div>
+          </header>
+          <span class="website">
+            <a target="_blank" href="https://github.com/kipricker/ImageThemeColorPicker">https://github.com/kipricker/ImageThemeColorPicker</a>
+          </span>
+          <ul class="keywords">
+              <li>iOS</li>
+              <li>Design</li>
+              <li>Color Theory</li>
+          </ul>
+          <div class="item">
+            <div class="summary">
+              <p><p>Wanted to see how I could create a color theme from album art</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Created a quantized color palette</p></li>
+                <li><p>Identify meaningful colors from palette using CIE distances and W3 contrast rules</p></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                Bachelor
+              </div>
+              <div class="area">
+                Game and Simulation Engineering
+              </div>
+              <div class="institution">
+                Shawnee State University
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              2005
+              </span>
+              <span class="endDate">
+              - 2009
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section margin1">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Games
+          </h3>
+          <ul class="keywords">
+            <li>Sim Tower</li>
+            <li>Jazz Jackrabbit</li>
+            <li>Streets of Sim City</li>
+            <li>Loom</li>
+            <li>Another World</li>
+            <li>Zelda</li>
+            <li>Borderlands</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Electronics
+          </h3>
+          <ul class="keywords">
+            <li>Custom keyboards</li>
+            <li>3D printing</li>
+            <li>Prototyping</li>
+            <li>Reverse engineering</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+  </body>
+</html>
